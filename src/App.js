@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
+import About from './Components/About/About.js'
 import Animals from './Components/Animals/Animals.js'
 import Plants from './Components/Plants/Plants.js'
 import Home from './Components/Home/Home.js'
@@ -18,10 +19,12 @@ class App extends Component {
              <li><Link to="/">Home</Link></li>
              <li><Link to="/plants">Plants</Link></li>
              <li><Link to="/animals">Animals</Link></li>
+             <li><Link to="/about">About</Link></li>
            </ul>
           <Route exact path="/" component={ Home } />
           <Route path="/plants" component={ Plants }/>
           <Route path="/animals" component={ Animals }/>
+          <Route path="/about" component={ About }/>
          </div>
        </Router>
       </div>
